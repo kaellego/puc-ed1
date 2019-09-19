@@ -7,6 +7,7 @@ class List
 public:
     List();
     bool insert(Thing *DAT);
+    bool search(int k, Thing *DAT);
     void printAll();
 private:
     Node *Head;
