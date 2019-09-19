@@ -3,7 +3,7 @@
 
 Stack::Stack()
 {
-    TOP=0;
+    TOP = 0;
 }
 
 bool Stack::IsEmpty()
@@ -13,11 +13,14 @@ bool Stack::IsEmpty()
 
 bool Stack::Push(Thing *DAT)
 {
-    Node *P=Node::MontaNode(DAT);
+    Node *P = Node::MontaNode(DAT);
+
     if(!P)
         return false;
-    P->Next=TOP;
-    TOP=P;
+
+    P->Next = TOP;
+    TOP = P;
+
     return true;
 }
 
@@ -25,8 +28,10 @@ bool Stack::Pop(Thing *DAT)
 {
     if(!TOP)
         return false;
-    Node *P=TOP;
-    TOP=P->Next;
+
+    Node *P = TOP;
+    TOP = P->Next;
     Node::DesmontaNode(P, DAT);
+
     return true;
 }

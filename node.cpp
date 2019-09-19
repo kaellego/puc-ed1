@@ -2,20 +2,19 @@
 
 Node* Node::MontaNode(Thing *DAT)
 {
-    Node*P=new Node;
+    Node*P = new Node;
     if(P)
     {
-        P->D=*DAT;
-        P->Next=0;
+        P->D = *DAT;
+        P->Next = 0;
     }
     return P;
 }
 
-void Node::DesmontaNode (Node *P,Thing *DAT)
+void Node::DesmontaNode (Node *P, Thing *DAT)
 {
-    if(P)
-    {
-        *DAT=P->D;
+    if(P){
+        *DAT = P->D;
         delete P;
     }
 }

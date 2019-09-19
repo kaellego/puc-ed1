@@ -3,7 +3,7 @@
 
 Queue::Queue()
 {
-    Head=Tail=NULL;
+    Head = Tail = NULL;
 }
 
 bool Queue::IsEmpty()
@@ -15,10 +15,13 @@ bool Queue::Dequeue(Thing *DAT)
 {
     if(!Head)
         return false;
-    Node *P=Head;
-    Head=Head->Next;
-    Node::DesmontaNode(P,DAT);
+
+    Node *P = Head;
+    Head = Head->Next;
+    Node::DesmontaNode(P, DAT);
+
     if(!Head)
-        Tail=NULL;
+        Tail = NULL;
+
     return true;
 }

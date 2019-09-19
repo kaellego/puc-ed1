@@ -8,7 +8,7 @@ public:
     Thing D;
     Node *Next;
     static Node* MontaNode(Thing *DAT);
-    static void DesmontaNode(Node *P,Thing *DAT);
+    static void DesmontaNode(Node *P, Thing *DAT);
 };
 
 #endif // NODE_H
