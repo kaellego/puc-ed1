@@ -1,6 +1,8 @@
 #include "queue.h"
 #include "node.h"
 
+
+//Fila
 Queue::Queue()
 {
     Head = Tail = NULL;

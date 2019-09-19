@@ -2,7 +2,7 @@
 
 Node* Node::MontaNode(Thing *DAT)
 {
-    Node*P = new Node;
+    Node *P = new Node;
     if(P)
     {
         P->D = *DAT;

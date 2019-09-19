@@ -7,9 +7,9 @@ class Stack
 {
 public:
     Stack();
-    bool IsEmpty();
-    bool Push(Thing *DAT);
-    bool Pop(Thing *DAT);
+    bool isEmpty();
+    bool push(Thing *DAT);
+    bool pop(Thing *DAT);
 private:
     Node *TOP;
 };

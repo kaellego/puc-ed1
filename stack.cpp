@@ -1,17 +1,19 @@
 #include "stack.h"
 #include "node.h"
 
+
+//pilha
 Stack::Stack()
 {
     TOP = 0;
 }
 
-bool Stack::IsEmpty()
+bool Stack::isEmpty()
 {
     return !TOP;
 }
 
-bool Stack::Push(Thing *DAT)
+bool Stack::push(Thing *DAT)
 {
     Node *P = Node::MontaNode(DAT);
 
@@ -24,7 +26,7 @@ bool Stack::Push(Thing *DAT)
     return true;
 }
 
-bool Stack::Pop(Thing *DAT)
+bool Stack::pop(Thing *DAT)
 {
     if(!TOP)
         return false;

@@ -43,7 +43,6 @@ int main()
                 cout << "Nome:\t" << t.getNome() << "\n" << "Idade:\t" << t.getIdade() << endl;
                 break;
         }
-        system("cls");
 
     }
 
