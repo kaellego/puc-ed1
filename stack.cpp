@@ -37,3 +37,9 @@ bool Stack::pop(Thing *DAT)
 
     return true;
 }
+
+void printAll()
+{
+    Node *aux = TOP;
+}
+void printAllr(Node *aux);

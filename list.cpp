@@ -14,5 +14,23 @@ bool List::insert(Thing *DAT)
     Head = P;
     return true;
 }
+bool List::search(int k, Thing *DAT)
+{
+    Node *P = Head;
+
+    while(P && (P->D).getIdade() != k){
+        P = P->Next;
+    }
+
+    if(P){
+        *DAT = P->D;
+        return true;
+    }
+
+    return false;
+}
+
 void List::printAll()
-{}
+{
+
+}
