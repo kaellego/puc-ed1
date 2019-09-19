@@ -14,9 +14,9 @@ int main()
     Stack s;
 
     while(n != 0){
-        //system("clear");
         cout << "0 - Sair\n1 - Push Stack\n2 - Pop Stack\nValor: ";
         cin >> n;
+        system("clear");
         switch (n) {
             case 1:
                 cout << "Nome:\t";
@@ -31,9 +31,9 @@ int main()
             case 2:
                 if(!s.isEmpty()){
                     s.pop(&t);
-                    cout << "Nome:\t" << t.getNome() << "\n" << "Idade:\t" << t.getIdade() << endl;
+                    cout << "Nome:\t" << t.getNome() << "\n" << "Idade:\t" << t.getIdade() << "\n\n";
                 }else {
-                    cout << "PILHA VAZIA!\n";
+                    cout << "PILHA VAZIA!\n\n";
                 }
                 break;
         }
