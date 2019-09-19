@@ -29,8 +29,12 @@ int main()
                 s.push(&t);
                 break;
             case 2:
-                s.pop(&t);
-                cout << "Nome:\t" << t.getNome() << "\n" << "Idade:\t" << t.getIdade() << endl;
+                if(!s.isEmpty()){
+                    s.pop(&t);
+                    cout << "Nome:\t" << t.getNome() << "\n" << "Idade:\t" << t.getIdade() << endl;
+                }else {
+                    cout << "PILHA VAZIA!\n";
+                }
                 break;
         }
     }
