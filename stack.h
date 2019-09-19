@@ -10,6 +10,8 @@ public:
     bool isEmpty();
     bool push(Thing *DAT);
     bool pop(Thing *DAT);
+    void printAll();
+    void printAllr(Node *aux);
 private:
     Node *TOP;
 };
