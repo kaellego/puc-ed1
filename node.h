@@ -7,6 +7,7 @@ class Node
 public:
     Thing D;
     Node *Next;
+    Node *Prev;
     static Node* MontaNode(Thing *DAT);
     static void DesmontaNode(Node *P, Thing *DAT);
 };

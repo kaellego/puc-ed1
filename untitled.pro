@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         list.cpp \
+        listd.cpp \
         main.cpp \
         node.cpp \
         queue.cpp \
@@ -29,6 +30,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     list.h \
+    listd.h \
     node.h \
     queue.h \
     stack.h \

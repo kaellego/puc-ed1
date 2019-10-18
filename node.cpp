@@ -6,6 +6,7 @@ Node* Node::MontaNode(Thing *DAT)
     if(P)
     {
         P->D = *DAT;
+        P->Prev = 0;
         P->Next = 0;
     }
     return P;
