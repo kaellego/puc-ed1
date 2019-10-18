@@ -8,6 +8,7 @@ class Thing
 {
 public:
     Thing();
+    int key;
     void setNome(string nome);
     void setIdade(int idade);
     string getNome();

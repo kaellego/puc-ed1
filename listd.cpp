@@ -9,10 +9,10 @@ bool ListD::dremove(Thing *DAT, int k)
     Node *P = Head;
     if(!P)
         return false;
-    while (k != (P->D).getIdade() && P->Next != Head) {
+    while (k != (P->D).key && P->Next != Head) {
         P = P->Next;
     }
-    if(k == (P->D).getIdade()){
+    if(k == (P->D).key){
         if(P->Next == P){
             // é unico
             Head = NULL;
@@ -28,9 +28,35 @@ bool ListD::dremove(Thing *DAT, int k)
     return false;
 }
 
+bool ListD::pop(Thing *DAT, int k)
+{
+    Node *P = Head;
+    while(P && (P->D).key != k){
+        P=P->Next;
+    }
+    if(!P)
+        return false;
+    if(P->Prev){
+        //tem anterior
+        (P->Prev)->Next = P->Next;
+    }else{
+        Head = P->Next;
+    }
+
+    if(P->Next){
+        //tem proximo
+        (P->Next)->Prev = P->Prev;
+    }else{
+        Tail = P->Prev;
+    }
+    Node::DesmontaNode(P, DAT);
+    IT
+}
+
+//TERMINAR ListD::push(Thing *DAT)
 bool ListD::push(Thing *DAT)
 {
-    int k = DAT->getIdade();
+    int k = DAT->key;
     Node *P = Node::MontaNode(DAT);
     if(!P){
         return false;
